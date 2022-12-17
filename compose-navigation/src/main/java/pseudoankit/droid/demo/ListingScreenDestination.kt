@@ -1,6 +1,12 @@
 package pseudoankit.droid.demo
 
-/* check the implementation in app module
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
+import pseudoankit.droid.composenavigation.DestinationSpec
+import pseudoankit.droid.composenavigation.NavArgs
+
 object ListingScreenDestination : DestinationSpec {
 
     override val route: String
@@ -22,8 +28,7 @@ object ListingScreenDestination : DestinationSpec {
         Button(onClick = {
             navController.navigate(
                 DetailScreenDestination(
-                    id = Random().nextInt(),
-                    name = "I have been sent from listings"
+                    Payload(100)
                 )
             )
         }) {
@@ -31,4 +36,3 @@ object ListingScreenDestination : DestinationSpec {
         }
     }
 }
-*/

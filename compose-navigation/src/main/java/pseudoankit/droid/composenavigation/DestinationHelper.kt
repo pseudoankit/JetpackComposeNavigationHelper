@@ -27,8 +27,6 @@ internal object DestinationHelper {
     ) { entry ->
         val arguments = navArgs.map { navArgs ->
             when (navArgs.type) {
-                is NavType.ParcelableType -> entry.arguments?.getParcelable(navArgs.name)
-                    ?: navArgs.defaultValue
                 NavType.FloatType -> entry.arguments?.getFloat(navArgs.name) ?: navArgs.defaultValue
                 NavType.FloatArrayType -> entry.arguments?.getFloatArray(navArgs.name)
                     ?: navArgs.defaultValue

@@ -27,8 +27,10 @@ object ListingScreenDestination : DestinationSpec {
         Button(onClick = {
             navController.navigate(
                 DetailScreenDestination(
-                    id = Random().nextInt(),
-                    name = "I have been sent from listings"
+                    DetailScreenPayload(
+                        id = Random().nextInt(),
+                        name = "I have been sent from listings"
+                    )
                 )
             )
         }) {

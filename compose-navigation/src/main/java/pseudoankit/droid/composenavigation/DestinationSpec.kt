@@ -11,6 +11,7 @@ import pseudoankit.droid.composenavigation.DestinationHelper.composableScreen
 /**
  * contract to create a destination
  * apart from below methods create one method to be called while creating instance of destination with required param
+ * parcelable or object types cannot be passed, pass it as string by parsing @see[DetailScreenDestination]
  */
 interface DestinationSpec {
 
